@@ -32,6 +32,17 @@ html {
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+.display {
+  padding: 10px;
+  background-color: hsl(57, 20%, 50%);
+  border-radius: 10px;
+  text-align: right;
+  flex: 0 1 100px;
+  font-size: 2rem;
+  box-shadow: rgb(87, 87, 87) 3px 3px 6px 0px inset,
+    rgba(32, 32, 32, 0.5) -3px -3px 6px 1px inset;
+}
+
 .keypad {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
