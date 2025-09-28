@@ -22,15 +22,14 @@ html {
 .calculator {
   width: 400px;
   height: 500px;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
-}
-
-.display {
-  background-color: lightgray;
-  text-align: right;
-  flex: 0 0 100px;
+  background-color: hsl(29, 100%, 60%);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .keypad {
@@ -42,7 +41,25 @@ html {
   margin-top: 20px;
 }
 
-.large-button {
+.btn {
+  font-family: "Helvetica", sans-serif;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(38, 100%, 80%);
+  color: hsl(38, 80%, 20%);
+  font-size: 1.8rem;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn--large {
   grid-column-start: span 2;
   font-size: 1.05rem;
+  color: black;
+  background-color: hsl(0, 0%, 90%);
 }
