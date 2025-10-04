@@ -1,5 +1,3 @@
-import { add, subtract, multiply, divide } from "./math.js";
-
 let currentInput = "";
 
 const currentLine = document.querySelector(".current-line");
