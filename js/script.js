@@ -60,6 +60,11 @@ function compute(value, type) {
       }
       updateDisplay();
       break;
+    case "equals":
+      if (previousInput === "" || currentInput === "") return;
+      operate();
+      updateDisplay();
+      break;
   }
 }
 
