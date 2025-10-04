@@ -50,6 +50,16 @@ function compute(value, type) {
       currentInput = "";
       updateDisplay();
       break;
+    case "action":
+      if (value === "clear") {
+        currentInput = "";
+        previousInput = "";
+        operator = "";
+      } else if (value === "delete") {
+        currentInput = currentInput.slice(0, -1);
+      }
+      updateDisplay();
+      break;
   }
 }
 
