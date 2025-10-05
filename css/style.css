@@ -91,7 +91,10 @@ body {
 
 .btn--large {
   grid-column-start: span 2;
-  background-color: hsl(0, 0%, 90%);
   font-size: 22px;
+}
+
+.btn--white {
+  background-color: hsl(0, 0%, 90%);
   color: hsl(0, 0%, 25%);
 }
