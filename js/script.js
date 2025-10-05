@@ -55,7 +55,7 @@ function compute(value, type) {
         currentInput = "";
         previousInput = "";
         operator = "";
-      } else if (value === "delete") {
+      } else if (value === "backspace") {
         currentInput = currentInput.slice(0, -1);
       }
       updateDisplay();
