@@ -76,7 +76,7 @@ body {
 
 .btn {
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   background-color: #ff896b;
   color: hsl(0, 0%, 95%);
   font-size: 1.8rem;
