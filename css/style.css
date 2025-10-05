@@ -29,7 +29,7 @@ body {
   height: 500px;
   display: flex;
   flex-direction: column;
-  background-color: hsl(29, 100%, 60%);
+  background-color: hsl(12, 100%, 71%);
   padding: 20px;
   border-radius: 20px;
   box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
@@ -37,7 +37,7 @@ body {
 }
 
 .display {
-  background-color: hsl(57, 20%, 50%);
+  background-color: hsl(0, 0%, 25%);
   flex: 0 1 100px;
   padding: 10px 15px;
   border-radius: 10px;
@@ -53,6 +53,7 @@ body {
 .current-line {
   word-wrap: break-word;
   word-break: break-all;
+  color: hsl(0, 0%, 95%);
 }
 
 .previous-line {
@@ -76,8 +77,8 @@ body {
 .btn {
   border: none;
   border-radius: 5px;
-  background-color: hsl(38, 100%, 80%);
-  color: hsl(38, 80%, 20%);
+  background-color: #ff896b;
+  color: hsl(0, 0%, 95%);
   font-size: 1.8rem;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
