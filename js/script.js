@@ -78,4 +78,30 @@ function handleClick(event) {
   compute(value, type);
 }
 
+function handleKeyPress(event) {
+  const key = event.key.toLowerCase();
+
+  if (key === "backspace") {
+    compute("backspace", "action");
+    event.preventDefault();
+    return;
+  } else if (key === "enter") {
+    compute("=", "equals");
+    event.preventDefault();
+    return;
+  } else if (key === "delete" || key === "c") {
+    compute("clear", "action");
+    event.preventDefault();
+    return;
+  }
+
+  const btn = document.querySelector(`[data-value="${key}"]`);
+  if (!btn) return;
+
+  const value = btn.dataset.value;
+  const type = btn.dataset.type;
+  compute(value, type);
+}
+
 keypad.addEventListener("click", handleClick);
+document.addEventListener("keydown", handleKeyPress);
