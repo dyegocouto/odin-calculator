@@ -135,6 +135,10 @@ body {
   transform: scale(0.98);
 }
 
+.btn:focus {
+  outline: none;
+}
+
 .btn--large {
   grid-column-start: span 2;
   font-size: 22px;
