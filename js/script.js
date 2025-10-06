@@ -42,6 +42,11 @@ function compute(value, type) {
       currentInput += value;
       updateDisplay();
       break;
+    case "dot":
+      if (currentInput.includes(".")) return;
+      currentInput += value;
+      updateDisplay();
+      break;
     case "operator":
       if (currentInput === "") return;
       if (previousInput !== "") operate();
