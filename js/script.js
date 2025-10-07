@@ -6,6 +6,10 @@ const currentLine = document.querySelector(".current-line");
 const previousLine = document.querySelector(".previous-line");
 const keypad = document.querySelector(".keypad");
 
+function roundDecimals(num) {
+  return parseFloat(num.toFixed(2));
+}
+
 function operate() {
   const prev = Number(previousInput);
   const current = Number(currentInput);
@@ -14,16 +18,16 @@ function operate() {
 
   switch (operator) {
     case "+":
-      currentInput = (prev + current).toString();
+      currentInput = roundDecimals(prev + current);
       break;
     case "-":
-      currentInput = (prev - current).toString();
+      currentInput = roundDecimals(prev - current);
       break;
     case "*":
-      currentInput = (prev * current).toString();
+      currentInput = roundDecimals(prev * current);
       break;
     case "/":
-      currentInput = current !== 0 ? (prev / current).toString() : "Error";
+      currentInput = current !== 0 ? roundDecimals(prev / current) : "Error";
       break;
   }
 
