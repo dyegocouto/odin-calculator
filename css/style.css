@@ -163,3 +163,34 @@ body {
   background-color: hsl(0, 0%, 90%);
   color: hsl(0, 0%, 25%);
 }
+
+.instructions-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.instructions__title {
+  font-family: "Lobster";
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.instructions__table {
+  margin-top: 20px;
+}
+
+.instructions__table th {
+  font-weight: normal;
+}
+
+.instructions__table td {
+  border: 1px solid hsl(0, 0%, 25%);
+  padding: 2px 1px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
