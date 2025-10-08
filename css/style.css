@@ -9,11 +9,6 @@
   font-family: "Helvetica", sans-serif;
 }
 
-body,
-html {
-  height: 100%;
-}
-
 body {
   background-image: linear-gradient(
       135deg,
@@ -64,16 +59,16 @@ body {
 }
 
 .wrapper {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 .content-wrapper {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
 }
 
 .title {
@@ -84,9 +79,8 @@ body {
 }
 
 .calculator {
-  margin-top: 30px;
-  width: 400px;
   height: 500px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   background-color: hsl(12, 100%, 71%);
