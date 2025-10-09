@@ -89,27 +89,35 @@ function handleClick(event) {
 
 function handleKeyPress(event) {
   const key = event.key.toLowerCase();
+  let btn;
 
   if (key === "backspace") {
+    btn = document.querySelector(`[data-value="backspace"]`);
     compute("backspace", "action");
     event.preventDefault();
-    return;
   } else if (key === "enter") {
+    btn = document.querySelector(`[data-value="="]`);
     compute("=", "equals");
     event.preventDefault();
-    return;
   } else if (key === "delete" || key === "c") {
+    btn = document.querySelector(`[data-value="clear"]`);
     compute("clear", "action");
     event.preventDefault();
-    return;
+  } else {
+    btn = document.querySelector(`[data-value="${key}"]`);
+    if (!btn) return;
+
+    const value = btn.dataset.value;
+    const type = btn.dataset.type;
+    compute(value, type);
   }
 
-  const btn = document.querySelector(`[data-value="${key}"]`);
-  if (!btn) return;
-
-  const value = btn.dataset.value;
-  const type = btn.dataset.type;
-  compute(value, type);
+  if (btn) {
+    btn.classList.add("btn--active-simulated");
+    setTimeout(() => {
+      btn.classList.remove("btn--active-simulated");
+    }, 100);
+  }
 }
 
 keypad.addEventListener("click", handleClick);

@@ -144,6 +144,10 @@ body {
   transform: scale(0.98);
 }
 
+.btn--active-simulated {
+  transform: scale(0.98);
+}
+
 .btn:focus {
   outline: none;
 }
