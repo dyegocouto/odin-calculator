@@ -7,3 +7,5 @@ A sleek, lightweight calculator built using JavaScript.
 - Lightweight. vanilla JS.
 
 This project was made as part of **The Odin Project** curriculum. Focusing on building practical skills through hands-on development.
+
+Favicon sourced from [Freepik](https://www.freepik.com/icon/calculator_583992).
