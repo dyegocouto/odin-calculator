@@ -40,12 +40,10 @@ function compute(value, type) {
   switch (type) {
     case "number":
       currentInput += value;
-      updateDisplay();
       break;
     case "dot":
       if (currentInput.includes(".")) return;
       currentInput += value;
-      updateDisplay();
       break;
     case "operator":
       if (currentInput === "") return;
@@ -53,7 +51,6 @@ function compute(value, type) {
       operator = value;
       previousInput = currentInput;
       currentInput = "";
-      updateDisplay();
       break;
     case "action":
       if (value === "clear") {
@@ -63,14 +60,12 @@ function compute(value, type) {
       } else if (value === "backspace") {
         currentInput = currentInput.slice(0, -1);
       }
-      updateDisplay();
       break;
     case "equals":
       if (previousInput === "" || currentInput === "") return;
       operate();
-      updateDisplay();
-      break;
   }
+  updateDisplay();
 }
 
 function handleClick(event) {
