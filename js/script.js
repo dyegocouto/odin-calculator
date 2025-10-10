@@ -11,27 +11,23 @@ function roundDecimals(num) {
 }
 
 function operate() {
-  const prev = Number(previousInput);
-  const current = Number(currentInput);
+  const prev = parseFloat(previousInput);
+  const current = parseFloat(currentInput);
 
-  if (isNaN(prev) || isNaN(current)) return;
+  const operations = {
+    "+": prev + current,
+    "-": prev - current,
+    "*": prev * current,
+    "/": current !== 0 ? prev / current : undefined,
+  };
 
-  switch (operator) {
-    case "+":
-      currentInput = roundDecimals(prev + current);
-      break;
-    case "-":
-      currentInput = roundDecimals(prev - current);
-      break;
-    case "*":
-      currentInput = roundDecimals(prev * current);
-      break;
-    case "/":
-      currentInput = current !== 0 ? roundDecimals(prev / current) : "Error";
-      break;
+  if (operations[operator]) {
+    currentInput = roundDecimals(operations[operator]);
+  } else {
+    currentInput = "Error";
   }
 
-  operator = null;
+  operator = "";
   previousInput = "";
 }
 
